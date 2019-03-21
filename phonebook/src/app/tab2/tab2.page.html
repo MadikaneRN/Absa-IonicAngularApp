@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Contact
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="name" placeholder="Name" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="number" placeholder="Phon number"  type="text"></ion-input>
+      </ion-item>
+      <ion-button expand="full" color="primary" (click) = "saveContact()">Save</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

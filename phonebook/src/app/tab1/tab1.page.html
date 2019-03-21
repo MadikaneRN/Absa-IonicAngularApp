@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar [debounce]="500" [(ngModel)]="searchkey" (ionInput)="search($event)" ></ion-searchbar>
+     <!-- <ion-icon name="ios-eye-outline" item-right></ion-icon> -->
+  <ion-list *ngIf='numbers != null'>
+      <!-- <ion-item>
+          <ion-input type="text" [(ngModel)]="searchkey" placeholder="Search" (ionInput)="search($event)" ></ion-input>
+      </ion-item>
+     -->
+    <ion-item *ngFor='let number of numbers'>
+      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s hydrated">
+        <h2>{{number['name']}}</h2>
+        <p>{{number['phoneNumber']}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
