@@ -20,7 +20,7 @@ export class PhoneBookService {
 
   createContact(phoneBook: PhoneBook) {
     return new Promise((resolve, error) => {
-        this.http.post('https://ntsikelelom.herokuapp.com//entry/create', phoneBook, {
+        this.http.post('https://ntsikelelom.herokuapp.com/entry/create', phoneBook, {
           headers: { 'Content-Type': 'application/json' }
         }).subscribe(response => {
             resolve(response);
